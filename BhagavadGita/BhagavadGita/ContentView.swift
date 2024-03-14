@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import BGUtility
 
 struct ContentView: View {
     var body: some View {
@@ -16,6 +17,12 @@ struct ContentView: View {
             Text("Hello, world!")
         }
         .padding()
+        .onAppear {
+            let numbers = [1, 2, 3, 4, 5]
+            let num1 = numbers[safeIndex: 0]
+            print(num1)
+
+        }
     }
 }
 

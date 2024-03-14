@@ -1,0 +1,15 @@
+{
+  "originHash" : "f4e9d78e99a51ca13e34f0aefd44663f8dcbb56c836e1aac27d9a72b3ebebda2",
+  "pins" : [
+    {
+      "identity" : "bgutility",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SalvikarRahul/BGUtility.git",
+      "state" : {
+        "revision" : "8af8563e3b586fc52b441a85be2f53fee7851ea8",
+        "version" : "1.0.1"
+      }
+    }
+  ],
+  "version" : 3
+}
