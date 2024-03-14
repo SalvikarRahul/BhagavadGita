@@ -1,5 +1,5 @@
 {
-  "originHash" : "f4e9d78e99a51ca13e34f0aefd44663f8dcbb56c836e1aac27d9a72b3ebebda2",
+  "originHash" : "f5ee49c5263f391d3758e0b628b60c7a3ce62384d89b21677b17053ccff4fc46",
   "pins" : [
     {
       "identity" : "bgutility",
@@ -8,6 +8,24 @@
       "state" : {
         "revision" : "8af8563e3b586fc52b441a85be2f53fee7851ea8",
         "version" : "1.0.1"
+      }
+    },
+    {
+      "identity" : "swiftybeaver",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SwiftyBeaver/SwiftyBeaver",
+      "state" : {
+        "revision" : "1080914828ef1c9ca9cd2bad50667b3d847dabff",
+        "version" : "2.0.0"
+      }
+    },
+    {
+      "identity" : "swinject",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Swinject/Swinject",
+      "state" : {
+        "revision" : "463cb2d659c8ae34899d18057ea5b1bb86fc3178",
+        "version" : "2.8.4"
       }
     }
   ],

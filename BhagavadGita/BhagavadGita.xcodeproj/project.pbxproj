@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		6588AC8E2BA2B3B2006025D0 /* BGUtility in Frameworks */ = {isa = PBXBuildFile; productRef = 6588AC8D2BA2B3B2006025D0 /* BGUtility */; };
+		6588AC922BA2D53E006025D0 /* SwiftyBeaver in Frameworks */ = {isa = PBXBuildFile; productRef = 6588AC912BA2D53E006025D0 /* SwiftyBeaver */; };
+		6588AC942BA2D5C6006025D0 /* BGLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6588AC932BA2D5C6006025D0 /* BGLogger.swift */; };
+		6588AC962BA2DBA4006025D0 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6588AC952BA2DBA4006025D0 /* ContentViewModel.swift */; };
+		6588AC992BA2DF29006025D0 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 6588AC982BA2DF29006025D0 /* Swinject */; };
+		6588AC9B2BA2F23E006025D0 /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6588AC9A2BA2F23E006025D0 /* Injection.swift */; };
 		65BB94DE2BA1D39100776ABC /* BhagavadGitaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BB94DD2BA1D39100776ABC /* BhagavadGitaApp.swift */; };
 		65BB94E02BA1D39100776ABC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BB94DF2BA1D39100776ABC /* ContentView.swift */; };
 		65BB94E22BA1D39400776ABC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65BB94E12BA1D39400776ABC /* Assets.xcassets */; };
@@ -35,6 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6588AC932BA2D5C6006025D0 /* BGLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGLogger.swift; sourceTree = "<group>"; };
+		6588AC952BA2DBA4006025D0 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		6588AC9A2BA2F23E006025D0 /* Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
 		65BB94DA2BA1D39100776ABC /* BhagavadGita.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BhagavadGita.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65BB94DD2BA1D39100776ABC /* BhagavadGitaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BhagavadGitaApp.swift; sourceTree = "<group>"; };
 		65BB94DF2BA1D39100776ABC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,6 +61,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6588AC8E2BA2B3B2006025D0 /* BGUtility in Frameworks */,
+				6588AC922BA2D53E006025D0 /* SwiftyBeaver in Frameworks */,
+				6588AC992BA2DF29006025D0 /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,8 +108,11 @@
 			children = (
 				65BB94DD2BA1D39100776ABC /* BhagavadGitaApp.swift */,
 				65BB94DF2BA1D39100776ABC /* ContentView.swift */,
+				6588AC952BA2DBA4006025D0 /* ContentViewModel.swift */,
 				65BB94E12BA1D39400776ABC /* Assets.xcassets */,
 				65BB94E32BA1D39400776ABC /* Preview Content */,
+				6588AC932BA2D5C6006025D0 /* BGLogger.swift */,
+				6588AC9A2BA2F23E006025D0 /* Injection.swift */,
 			);
 			path = BhagavadGita;
 			sourceTree = "<group>";
@@ -148,6 +161,8 @@
 			name = BhagavadGita;
 			packageProductDependencies = (
 				6588AC8D2BA2B3B2006025D0 /* BGUtility */,
+				6588AC912BA2D53E006025D0 /* SwiftyBeaver */,
+				6588AC982BA2DF29006025D0 /* Swinject */,
 			);
 			productName = BhagavadGita;
 			productReference = 65BB94DA2BA1D39100776ABC /* BhagavadGita.app */;
@@ -223,6 +238,8 @@
 			mainGroup = 65BB94D12BA1D39000776ABC;
 			packageReferences = (
 				6588AC8C2BA2B29C006025D0 /* XCRemoteSwiftPackageReference "BGUtility" */,
+				6588AC902BA2D53E006025D0 /* XCRemoteSwiftPackageReference "SwiftyBeaver" */,
+				6588AC972BA2DF29006025D0 /* XCRemoteSwiftPackageReference "Swinject" */,
 			);
 			productRefGroup = 65BB94DB2BA1D39100776ABC /* Products */;
 			projectDirPath = "";
@@ -288,8 +305,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6588AC9B2BA2F23E006025D0 /* Injection.swift in Sources */,
+				6588AC962BA2DBA4006025D0 /* ContentViewModel.swift in Sources */,
 				65BB94E02BA1D39100776ABC /* ContentView.swift in Sources */,
 				65BB94DE2BA1D39100776ABC /* BhagavadGitaApp.swift in Sources */,
+				6588AC942BA2D5C6006025D0 /* BGLogger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -631,6 +651,22 @@
 				minimumVersion = 1.0.1;
 			};
 		};
+		6588AC902BA2D53E006025D0 /* XCRemoteSwiftPackageReference "SwiftyBeaver" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyBeaver/SwiftyBeaver";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+		6588AC972BA2DF29006025D0 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.8.4;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -638,6 +674,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 6588AC8C2BA2B29C006025D0 /* XCRemoteSwiftPackageReference "BGUtility" */;
 			productName = BGUtility;
+		};
+		6588AC912BA2D53E006025D0 /* SwiftyBeaver */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6588AC902BA2D53E006025D0 /* XCRemoteSwiftPackageReference "SwiftyBeaver" */;
+			productName = SwiftyBeaver;
+		};
+		6588AC982BA2DF29006025D0 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6588AC972BA2DF29006025D0 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

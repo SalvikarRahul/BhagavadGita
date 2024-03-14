@@ -9,6 +9,7 @@ import SwiftUI
 import BGUtility
 
 struct ContentView: View {
+    @ObservedObject var viewModel = ContentViewModel()
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -18,10 +19,7 @@ struct ContentView: View {
         }
         .padding()
         .onAppear {
-            let numbers = [1, 2, 3, 4, 5]
-            let num1 = numbers[safeIndex: 0]
-            print(num1)
-
+            viewModel.onAppear()
         }
     }
 }
