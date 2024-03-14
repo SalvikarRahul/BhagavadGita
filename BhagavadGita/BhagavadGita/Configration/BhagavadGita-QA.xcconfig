@@ -1,0 +1,10 @@
+//
+//  BhagavadGita-QA.xcconfig
+//  BhagavadGita
+//
+//  Created by MYTSP02154 on 14/03/24.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+BASE_URL = bhagavad-gita3.p.rapidapi.com/qa

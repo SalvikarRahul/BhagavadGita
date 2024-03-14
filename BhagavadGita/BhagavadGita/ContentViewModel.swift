@@ -11,6 +11,6 @@ class ContentViewModel: ObservableObject {
     @Injected private var logger: BGLoggerType
 
     func onAppear() {
-        logger.warning("dsd")
+        logger.warning("\(API.baseURL) -> \(ConfigurationManager.environment)")
     }
 }
