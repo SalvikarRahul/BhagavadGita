@@ -1,0 +1,7 @@
+project: BhagavadGita.xcodeproj
+retain_objc_accessible: true
+retain_public: true
+schemes:
+- BhagavadGita-Dev
+targets:
+- BhagavadGita
