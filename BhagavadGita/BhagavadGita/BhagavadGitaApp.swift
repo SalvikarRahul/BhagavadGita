@@ -20,10 +20,9 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 struct BhagavadGitaApp: App {
     // register app delegate for Firebase setup
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            OnBoardingView()
         }
     }
 }

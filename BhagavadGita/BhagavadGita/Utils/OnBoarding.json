@@ -1,0 +1,22 @@
+[
+    {
+        "image": "onboarding-image-1",
+        "title": "onboarding-title-1",
+        "detail": "onboarding-detail-1",
+    },
+    {
+        "image": "onboarding-image-2",
+        "title": "onboarding-title-2",
+        "detail": "onboarding-detail-2",
+    },
+    {
+        "image": "onboarding-image-3",
+        "title": "onboarding-title-3",
+        "detail": "onboarding-detail-3",
+    },
+    {
+        "image": "onboarding-image-4",
+        "title": "onboarding-title-4",
+        "detail": "onboarding-detail-4",
+    }
+]

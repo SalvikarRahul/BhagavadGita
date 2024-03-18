@@ -1,13 +1,123 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "hello" : {
+    "onboarding-detail-1" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rahul"
+            "value" : "Read the Gita anywhere,\nanytime!"
+          }
+        }
+      }
+    },
+    "onboarding-detail-2" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modern and interactive\ndesign to help you focus on reading."
+          }
+        }
+      }
+    },
+    "onboarding-detail-3" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dive deep into\neach verse\nthrough a library of translations, transliterations and commentaries."
+          }
+        }
+      }
+    },
+    "onboarding-detail-4" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Share, memorise\nand take\nnotes on your favourite verses."
+          }
+        }
+      }
+    },
+    "Onboarding-getStarted" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Get Started"
+          }
+        }
+      }
+    },
+    "Onboarding-next" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Next"
+          }
+        }
+      }
+    },
+    "Onboarding-skip" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skip"
+          }
+        }
+      }
+    },
+    "onboarding-title-1" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bhagavad Gita - Simplified"
+          }
+        }
+      }
+    },
+    "onboarding-title-2" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beautiful Design"
+          }
+        }
+      }
+    },
+    "onboarding-title-3" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Explore Each Verse"
+          }
+        }
+      }
+    },
+    "onboarding-title-4" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Make It Your Own"
           }
         }
       }

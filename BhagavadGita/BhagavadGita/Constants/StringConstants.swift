@@ -9,5 +9,4 @@ import Foundation
 
 struct StringConstants {
     static let hello = "hello".localized
-
 }
