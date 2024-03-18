@@ -4,5 +4,10 @@
 <dict>
 	<key>BASE_URL</key>
 	<string>$(BASE_URL)</string>
+	<key>UILaunchScreen</key>
+	<dict>
+		<key>UIImageName</key>
+		<string>launchimage</string>
+	</dict>
 </dict>
 </plist>
