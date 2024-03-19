@@ -1,13 +1,24 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "Onboarding-choosePreferredLanguage" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choose your preferred language"
+          }
+        }
+      }
+    },
     "onboarding-detail-1" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Read the Gita anywhere,\nanytime!"
+            "value" : "Read the Gita anywhere, anytime!"
           }
         }
       }
@@ -18,7 +29,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Modern and interactive\ndesign to help you focus on reading."
+            "value" : "Modern and interactive design to help you focus on reading."
           }
         }
       }
@@ -29,7 +40,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Dive deep into\neach verse\nthrough a library of translations, transliterations and commentaries."
+            "value" : "Dive deep into each verse through a library of translations, transliterations and commentaries."
           }
         }
       }
@@ -40,7 +51,29 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Share, memorise\nand take\nnotes on your favourite verses."
+            "value" : "Share, memorise and take notes on your favourite verses."
+          }
+        }
+      }
+    },
+    "Onboarding-dontWorryYouCanChangeLater" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "(Don't worry, you can change it later.)"
+          }
+        }
+      }
+    },
+    "Onboarding-english" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "English"
           }
         }
       }
@@ -56,6 +89,17 @@
         }
       }
     },
+    "Onboarding-hindi" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hindi"
+          }
+        }
+      }
+    },
     "Onboarding-next" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -63,6 +107,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Next"
+          }
+        }
+      }
+    },
+    "Onboarding-okLetsUsGo" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK, Let's go!"
           }
         }
       }

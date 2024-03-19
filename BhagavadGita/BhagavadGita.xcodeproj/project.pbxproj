@@ -31,6 +31,7 @@
 		6588ACE12BA812A1006025D0 /* LocalJsonLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6588ACE02BA812A1006025D0 /* LocalJsonLoader.swift */; };
 		6588ACE32BA81C90006025D0 /* PageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6588ACE22BA81C90006025D0 /* PageControl.swift */; };
 		6588ACE52BA84B7D006025D0 /* OnBoardingInteriorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6588ACE42BA84B7D006025D0 /* OnBoardingInteriorView.swift */; };
+		6588ACE72BA93C9E006025D0 /* GetStartedPopOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6588ACE62BA93C9E006025D0 /* GetStartedPopOverView.swift */; };
 		65BB94DE2BA1D39100776ABC /* BhagavadGitaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BB94DD2BA1D39100776ABC /* BhagavadGitaApp.swift */; };
 		65BB94E02BA1D39100776ABC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BB94DF2BA1D39100776ABC /* ContentView.swift */; };
 		65BB94E22BA1D39400776ABC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65BB94E12BA1D39400776ABC /* Assets.xcassets */; };
@@ -81,6 +82,7 @@
 		6588ACE02BA812A1006025D0 /* LocalJsonLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalJsonLoader.swift; sourceTree = "<group>"; };
 		6588ACE22BA81C90006025D0 /* PageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControl.swift; sourceTree = "<group>"; };
 		6588ACE42BA84B7D006025D0 /* OnBoardingInteriorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingInteriorView.swift; sourceTree = "<group>"; };
+		6588ACE62BA93C9E006025D0 /* GetStartedPopOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStartedPopOverView.swift; sourceTree = "<group>"; };
 		65BB94DA2BA1D39100776ABC /* BhagavadGita.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BhagavadGita.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65BB94DD2BA1D39100776ABC /* BhagavadGitaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BhagavadGitaApp.swift; sourceTree = "<group>"; };
 		65BB94DF2BA1D39100776ABC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 			children = (
 				6588ACD72BA80BB1006025D0 /* OnBoardingView.swift */,
 				6588ACE42BA84B7D006025D0 /* OnBoardingInteriorView.swift */,
+				6588ACE62BA93C9E006025D0 /* GetStartedPopOverView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -500,6 +503,7 @@
 				6588ACE52BA84B7D006025D0 /* OnBoardingInteriorView.swift in Sources */,
 				6588ACDC2BA80BD4006025D0 /* OnBoardingModel.swift in Sources */,
 				6588ACCE2BA80A09006025D0 /* Localized+Extenstion.swift in Sources */,
+				6588ACE72BA93C9E006025D0 /* GetStartedPopOverView.swift in Sources */,
 				6588AC962BA2DBA4006025D0 /* ContentViewModel.swift in Sources */,
 				6588ACE12BA812A1006025D0 /* LocalJsonLoader.swift in Sources */,
 				6588ACE32BA81C90006025D0 /* PageControl.swift in Sources */,

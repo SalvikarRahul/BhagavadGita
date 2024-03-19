@@ -11,7 +11,7 @@ import SwiftUI
 struct OnBoardingView: View {
     @ObservedObject var viewModel = OnBoardingViewModel()
     @State private var currentIndex = 0
-
+    @State private var showPopup = false
     var body: some View {
         ZStack(alignment: .bottom) {
             TabView(selection: $currentIndex) {
@@ -43,7 +43,7 @@ struct OnBoardingView: View {
                 } else {
                     HStack {
                         Button {
-
+                            showPopup = true
                         } label: {
                             Text("Onboarding-getStarted")
                                 .foregroundColor(Color.white)
@@ -53,9 +53,19 @@ struct OnBoardingView: View {
                         }.background(Color.orange)
                     }.padding(40)
                 }
-                // Spacer().frame(height: 40)
             }
-        }
+
+            if showPopup {
+                ZStack {
+                    Color.black.opacity(0.5)
+                    VStack {
+                        Spacer()
+                        GetStartedPopOverView(showPopup: $showPopup)
+                        Spacer()
+                    }
+                }
+            }
+        }.edgesIgnoringSafeArea(.all)
     }
 
     @ViewBuilder
