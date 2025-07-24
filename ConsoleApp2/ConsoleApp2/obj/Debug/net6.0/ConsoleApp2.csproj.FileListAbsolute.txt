@@ -1,0 +1,32 @@
+E:\KA09DPS\Hackathon25\ConsoleApp2\ConsoleApp2\obj\Debug\net6.0\ConsoleApp2.csproj.AssemblyReference.cache
+E:\KA09DPS\Hackathon25\ConsoleApp2\ConsoleApp2\obj\Debug\net6.0\ConsoleApp2.GeneratedMSBuildEditorConfig.editorconfig
+E:\KA09DPS\Hackathon25\ConsoleApp2\ConsoleApp2\obj\Debug\net6.0\ConsoleApp2.AssemblyInfoInputs.cache
+E:\KA09DPS\Hackathon25\ConsoleApp2\ConsoleApp2\obj\Debug\net6.0\ConsoleApp2.AssemblyInfo.cs
+E:\KA09DPS\Hackathon25\ConsoleApp2\ConsoleApp2\obj\Debug\net6.0\ConsoleApp2.csproj.CoreCompileInputs.cache
+E:\KA09DPS\Hackathon25\ConsoleApp2\ConsoleApp2\bin\Debug\net6.0\ConsoleApp2.exe
+E:\KA09DPS\Hackathon25\ConsoleApp2\ConsoleApp2\bin\Debug\net6.0\ConsoleApp2.deps.json
+E:\KA09DPS\Hackathon25\ConsoleApp2\ConsoleApp2\bin\Debug\net6.0\ConsoleApp2.runtimeconfig.json
+E:\KA09DPS\Hackathon25\ConsoleApp2\ConsoleApp2\bin\Debug\net6.0\ConsoleApp2.dll
+E:\KA09DPS\Hackathon25\ConsoleApp2\ConsoleApp2\bin\Debug\net6.0\ConsoleApp2.pdb
+E:\KA09DPS\Hackathon25\ConsoleApp2\ConsoleApp2\obj\Debug\net6.0\ConsoleApp2.dll
+E:\KA09DPS\Hackathon25\ConsoleApp2\ConsoleApp2\obj\Debug\net6.0\refint\ConsoleApp2.dll
+E:\KA09DPS\Hackathon25\ConsoleApp2\ConsoleApp2\obj\Debug\net6.0\ConsoleApp2.pdb
+E:\KA09DPS\Hackathon25\ConsoleApp2\ConsoleApp2\obj\Debug\net6.0\ConsoleApp2.genruntimeconfig.cache
+E:\KA09DPS\Hackathon25\ConsoleApp2\ConsoleApp2\obj\Debug\net6.0\ref\ConsoleApp2.dll
+E:\Hackathon 25\BhagavadGita\ConsoleApp2\ConsoleApp2\bin\Debug\net6.0\ConsoleApp2.exe
+E:\Hackathon 25\BhagavadGita\ConsoleApp2\ConsoleApp2\bin\Debug\net6.0\ConsoleApp2.deps.json
+E:\Hackathon 25\BhagavadGita\ConsoleApp2\ConsoleApp2\bin\Debug\net6.0\ConsoleApp2.runtimeconfig.json
+E:\Hackathon 25\BhagavadGita\ConsoleApp2\ConsoleApp2\bin\Debug\net6.0\ConsoleApp2.dll
+E:\Hackathon 25\BhagavadGita\ConsoleApp2\ConsoleApp2\bin\Debug\net6.0\ConsoleApp2.pdb
+E:\Hackathon 25\BhagavadGita\ConsoleApp2\ConsoleApp2\obj\Debug\net6.0\ConsoleApp2.csproj.AssemblyReference.cache
+E:\Hackathon 25\BhagavadGita\ConsoleApp2\ConsoleApp2\obj\Debug\net6.0\ConsoleApp2.GeneratedMSBuildEditorConfig.editorconfig
+E:\Hackathon 25\BhagavadGita\ConsoleApp2\ConsoleApp2\obj\Debug\net6.0\ConsoleApp2.AssemblyInfoInputs.cache
+E:\Hackathon 25\BhagavadGita\ConsoleApp2\ConsoleApp2\obj\Debug\net6.0\ConsoleApp2.AssemblyInfo.cs
+E:\Hackathon 25\BhagavadGita\ConsoleApp2\ConsoleApp2\obj\Debug\net6.0\ConsoleApp2.csproj.CoreCompileInputs.cache
+E:\Hackathon 25\BhagavadGita\ConsoleApp2\ConsoleApp2\obj\Debug\net6.0\ConsoleApp2.dll
+E:\Hackathon 25\BhagavadGita\ConsoleApp2\ConsoleApp2\obj\Debug\net6.0\refint\ConsoleApp2.dll
+E:\Hackathon 25\BhagavadGita\ConsoleApp2\ConsoleApp2\obj\Debug\net6.0\ConsoleApp2.pdb
+E:\Hackathon 25\BhagavadGita\ConsoleApp2\ConsoleApp2\obj\Debug\net6.0\ConsoleApp2.genruntimeconfig.cache
+E:\Hackathon 25\BhagavadGita\ConsoleApp2\ConsoleApp2\obj\Debug\net6.0\ref\ConsoleApp2.dll
+E:\Hackathon 25\BhagavadGita\ConsoleApp2\ConsoleApp2\bin\Debug\net6.0\Newtonsoft.Json.dll
+E:\Hackathon 25\BhagavadGita\ConsoleApp2\ConsoleApp2\obj\Debug\net6.0\ConsoleApp2.csproj.CopyComplete

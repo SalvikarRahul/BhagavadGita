@@ -1,0 +1,18 @@
+PR #2 - Reviewer Comments (Author responses excluded)
+=================================================================
+📊 COMMENT STATISTICS:
+   Total Reviewer Comments: 2
+   Active Reviewers: 2
+   Comments per Reviewer:
+     • SalvikarRahul: 1 comment
+     • sundarswaroop: 1 comment
+=================================================================
+
+Comment #1 - Reviewer: sundarswaroop
+Reviewer Feedback: Add the codebase
+=================================================================
+
+Comment #2 - Reviewer: SalvikarRahul
+Reviewer Feedback: Code is acceptable add comment above function
+=================================================================
+
