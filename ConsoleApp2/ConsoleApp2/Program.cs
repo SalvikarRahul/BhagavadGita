@@ -17,31 +17,31 @@ namespace ConsoleApp2
             DateTime fromDate = DateTime.Now.AddDays(-30);
             DateTime toDate = DateTime.Now;
 
-            //if (args.Length != 2)
-            //{
-            //    Console.WriteLine("Provide proper input");
-            //    return;
-            //}
+            if (args.Length != 2)
+            {
+                Console.WriteLine("Provide proper input");
+                return;
+            }
 
 
-            //if (DateTime.TryParse(args[0], out DateTime dt1))
-            //{
-            //    fromDate = dt1;
-            //    if (DateTime.TryParse(args[1], out DateTime dt2))
-            //    {
-            //        toDate = dt2;
-            //    }
-            //    else
-            //    {
-            //        Console.WriteLine("Provide proper input");
-            //        return;
-            //    }
-            //}
-            //else
-            //{
-            //    Console.WriteLine("Provide proper input");
-            //    return;
-            //}
+            if (DateTime.TryParse(args[0], out DateTime dt1))
+            {
+                fromDate = dt1;
+                if (DateTime.TryParse(args[1], out DateTime dt2))
+                {
+                    toDate = dt2;
+                }
+                else
+                {
+                    Console.WriteLine("Provide proper input");
+                    return;
+                }
+            }
+            else
+            {
+                Console.WriteLine("Provide proper input");
+                return;
+            }
 
             PrList = new List<Prs>();
             var program = new GetComments();
@@ -73,7 +73,7 @@ namespace ConsoleApp2
 
             if (process.ExitCode != 0)
             {
-                Console.WriteLine($"Error running command: pr list --state all --json number,state");
+                Console.WriteLine($"Error running command: pr list --state all --json number,state --search \"created:{fromDate:yyyy-MM-dd}..{toDate:yyyy-MM-dd}\"");
                 Console.WriteLine($"Error: {error}");
                 Environment.Exit(1);
             }
@@ -83,7 +83,8 @@ namespace ConsoleApp2
 
             var temp = JsonConvert.DeserializeObject<List<PullReuqest>>(output.Trim());
             List<string> prNumbers = new List<string>();
-            for (int i = 0; i < temp.Count; i++)
+            int tempCount = temp.Count > 10 ? 10 : temp.Count;
+            for (int i = 0; i < tempCount; i++)
             {
                 prNumbers.Add(temp[i].Number.ToString());
             }

@@ -136,7 +136,8 @@ namespace ConsoleApp2
 
             if (PrList.Count > 0)
             {
-                for (int i = 0; i < PrList.Count; i++)
+                int count = PrList.Count > 10 ? 10 : PrList.Count;
+                for (int i = 0; i < count; i++)
                 {
                     var prRowItem = PrList[i];
                     htmlContent = htmlContent + "<tr> <td  >" + prRowItem.PrNumber + "</td>";
