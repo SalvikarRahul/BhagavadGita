@@ -121,19 +121,50 @@ namespace ConsoleApp2
                     // Save in all formats: text, HTML, CSV, and participants info
                     await SaveCommentsToFileAsync(prNumber, comments);
 
+                    var processInfoFile = new ProcessStartInfo()
+                    {
+                        FileName = "gh",
+                        Arguments = $" pr diff --name-only {prNumber}",
+                        UseShellExecute = false,
+                        RedirectStandardOutput = true,
+                        RedirectStandardError = true,
+                        CreateNoWindow = true,
+
+                    };
+
+                    using var processfile = Process.Start(processInfoFile);
+                    var outputfile = processfile.StandardOutput.ReadToEnd();
+                    processfile.WaitForExit();
+                    var errorfile = processfile.StandardError.ReadToEnd();
+
+                    processfile.WaitForExit();
+
+                    if (processfile.ExitCode != 0)
+                    {
+                        Console.WriteLine($"Error running command: pr list --state all --json number,state");
+                        Console.WriteLine($"Error: {errorfile}");
+                        Environment.Exit(1);
+                    }
+
                     PrList.Add(new Prs()
                     {
                         PrNumber = prNumber,
                         prComments = comments,
                         stats = GetCommentStatistics(comments),
-                        PrState = participants.prState
-                    });
+                        PrState = participants.prState,
+                        fileChanges= outputfile.Trim()
+
+                    }) ;
                     //await SaveCommentsToHtmlAsync(prNumber, comments);
                     //await SaveCommentsToCsvAsync(prNumber, comments);
                     //await SaveParticipantsInfoAsync(prNumber, participants, comments);
                     //await SaveParticipantsCsvAsync(prNumber, participants, comments);
 
-                    successCount++;
+
+                   
+                    //  File.WriteAllText("pr list --state all --json number,state", outputfile.Trim());
+                    
+                      successCount++;
                     Console.WriteLine($"✅ PR #{prNumber} completed successfully!");
                 }
                 catch (Exception ex)
@@ -142,7 +173,7 @@ namespace ConsoleApp2
                     failedPrs.Add(prNumber);
                 }
             }
-            var date = PrList;
+         
             string htmlData = ProcessInfo.ConstructHTL(PrList);
             SaveCommentsToHtml(htmlData);
             //PrintFinalSummary(successCount, prNumbers.Count, failedPrs);
