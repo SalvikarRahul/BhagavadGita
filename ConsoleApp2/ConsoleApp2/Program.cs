@@ -9,17 +9,47 @@ namespace ConsoleApp2
 {
     public class GetComments
     {
-        private const string OutputDirectory = "../repo_name/pr_comments";
+        private const string OutputDirectory = "pr_comments";
         //private const string Repository = "SalvikarRahul/BhagavadGita";
         public static List<Prs> PrList;
         public static async Task Main(string[] args)
         {
+            DateTime fromDate = DateTime.Now.AddDays(-30);
+            DateTime toDate = DateTime.Now;
+
+            //if (args.Length != 2)
+            //{
+            //    Console.WriteLine("Provide proper input");
+            //    return;
+            //}
+
+
+            //if (DateTime.TryParse(args[0], out DateTime dt1))
+            //{
+            //    fromDate = dt1;
+            //    if (DateTime.TryParse(args[1], out DateTime dt2))
+            //    {
+            //        toDate = dt2;
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("Provide proper input");
+            //        return;
+            //    }
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Provide proper input");
+            //    return;
+            //}
+
             PrList = new List<Prs>();
             var program = new GetComments();
-            await program.RunAsync();
+            await program.RunAsync(fromDate, toDate);
+            Console.Read();
         }
 
-        public async Task RunAsync()
+        public async Task RunAsync(DateTime fromDate, DateTime toDate)
         {
             // List all PR numbers you want to process here
 
@@ -52,7 +82,7 @@ namespace ConsoleApp2
             // user parser
 
             var temp = JsonConvert.DeserializeObject<List<PullReuqest>>(output.Trim());
-             List<string>  prNumbers = new List<string>();
+            List<string> prNumbers = new List<string>();
             for (int i = 0; i < temp.Count; i++)
             {
                 prNumbers.Add(temp[i].Number.ToString());
@@ -89,12 +119,12 @@ namespace ConsoleApp2
 
                     // Save in all formats: text, HTML, CSV, and participants info
                     await SaveCommentsToFileAsync(prNumber, comments);
-                   
+
                     PrList.Add(new Prs()
                     {
                         PrNumber = prNumber,
                         prComments = comments,
-                        stats =  GetCommentStatistics(comments),
+                        stats = GetCommentStatistics(comments),
                         PrState = participants.prState
                     });
                     //await SaveCommentsToHtmlAsync(prNumber, comments);
@@ -117,7 +147,7 @@ namespace ConsoleApp2
             //PrintFinalSummary(successCount, prNumbers.Count, failedPrs);
         }
 
-        
+
 
         #region Utility Methods
 
@@ -133,11 +163,11 @@ namespace ConsoleApp2
                     RedirectStandardOutput = true,
                     RedirectStandardError = true,
                     CreateNoWindow = true,
-                                      
+
                 };
 
                 using var process = Process.Start(processInfo);
-                var output =  process.StandardOutput.ReadToEnd();
+                var output = process.StandardOutput.ReadToEnd();
                 process.WaitForExit();
                 var error = await process.StandardError.ReadToEndAsync();
 
@@ -164,17 +194,17 @@ namespace ConsoleApp2
 
         private async Task<JsonDocument> FetchPrJsonAsync(string prNumber, string jsonFields, string fileSuffix = "", bool IsreadOnly = false)
         {
-            var tempFile = string.Concat("pr_",fileSuffix, prNumber,".json"); //"/tmp/pr_{fileSuffix}_{prNumber}.json";
-          
+            var tempFile = string.Concat("pr_", fileSuffix, prNumber, ".json"); //"/tmp/pr_{fileSuffix}_{prNumber}.json";
+
             //if (!File.Exists(tempFile) & !IsreadOnly)
             //{
             //    File.Create(tempFile);
-              
+
             //}
             //if (!IsreadOnly)
             //{
-                // await RunCommandAsync($" pr view {prNumber} --json {jsonFields} > {tempFile}");
-             var prdata =   await RunCommandAsync($" pr view {prNumber} --json {jsonFields}", prNumber);
+            // await RunCommandAsync($" pr view {prNumber} --json {jsonFields} > {tempFile}");
+            var prdata = await RunCommandAsync($" pr view {prNumber} --json {jsonFields}", prNumber);
             //}
 
             // await RunCommandAsync($" git fetch origin + refs / pull/*/head:refs/remotes/origin/pr/*
@@ -304,7 +334,7 @@ namespace ConsoleApp2
             public string Code { get; set; } = "";
             public string CommentText { get; set; } = "";
 
-          
+
 
         }
 
@@ -330,7 +360,7 @@ namespace ConsoleApp2
         {
             Console.WriteLine($"Fetching PR participants for PR {prNumber}...");
 
-             var jsonDoc = await FetchPrJsonAsync(prNumber, "author,reviews,comments,state", "info");
+            var jsonDoc = await FetchPrJsonAsync(prNumber, "author,reviews,comments,state", "info");
             var root = jsonDoc.RootElement;
 
             // Extract author
@@ -414,7 +444,7 @@ namespace ConsoleApp2
                 comments.Add(new Comment
                 {
                     Author = author,
-                    Date = submittedAt,                    
+                    Date = submittedAt,
                     CommentText = body
                 });
 
@@ -591,7 +621,7 @@ namespace ConsoleApp2
             var outputFile = Path.Combine(outputDir, $"pr_{prNumber}_reviewer_comments.html");
 
             var stats = GetCommentStatistics(comments);
-            
+
             var htmlContent = GenerateHtmlContent(prNumber, comments, stats);
 
             await File.WriteAllTextAsync(outputFile, htmlContent);
@@ -601,16 +631,74 @@ namespace ConsoleApp2
 
         private void SaveCommentsToHtml(string htmlContent)
         {
-            var outputDir = GetOutputDirectory();
-            var outputFile = outputDir+ "/pr_1_reviewer_comments.html";
-          //  File.Create(outputFile);
-           
+            var outputDir = Path.Join(Directory.GetCurrentDirectory(), "pr_comments");// GetOutputDirectory();
+            var outputFile = outputDir + $"/{DateTime.Now:yyyy_MM_dd_HH_mm_ss}.html";
+            //  File.Create(outputFile);
 
-             File.WriteAllText(outputFile, htmlContent);
+
+            File.WriteAllText(outputFile, htmlContent);
             Console.WriteLine($"HTML reviewer comments saved to: {outputFile}");
-            
+
+            OpenFile(outputFile);
         }
 
+        private void OpenFile(string outputFilePath)
+        {
+            string folderPath = Path.Join(Directory.GetCurrentDirectory(), "pr_comments");
+
+            try
+            {
+                if (File.Exists(outputFilePath))
+                {
+                    ProcessStartInfo psi = new ProcessStartInfo
+                    {
+                        FileName = outputFilePath,
+                        UseShellExecute = true,
+                        WorkingDirectory = folderPath,
+                    };
+                    Process.Start(psi);
+                }
+                else
+                {
+                    Console.WriteLine("File not found..");
+                }
+                Cleanup(folderPath);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        private void Cleanup(string folderPath)
+        {
+            try
+            {
+                if (Directory.Exists(folderPath))
+                {
+                    string[] txtFiles = Directory.GetFiles(folderPath, "*.txt");
+
+                    foreach (string file in txtFiles)
+                    {
+                        try
+                        {
+                            File.Delete(file);
+                            //Console.WriteLine($"Deleted: {file}");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine($"Failed to delete {file}: {ex.Message}");
+                        }
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
 
         private async Task SaveCommentsToCsvAsync(string prNumber, List<Comment> comments)
         {

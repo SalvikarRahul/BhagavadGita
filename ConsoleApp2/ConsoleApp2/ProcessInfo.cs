@@ -12,7 +12,7 @@ namespace ConsoleApp2
                 RedirectStandardError = true,
                 UseShellExecute = false,
                 CreateNoWindow = true,
-                WorkingDirectory = Directory.GetCurrentDirectory(), 
+                WorkingDirectory = Directory.GetCurrentDirectory(),
             };
 
             using (var process = new Process { StartInfo = processInfo })
@@ -36,39 +36,126 @@ namespace ConsoleApp2
 <head>
     <meta charset=""UTF-8"">
     <meta name=""viewport"" content=""width=device-width, initial-scale=1.0"">
+ <style>
+        body {{
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f6f8fa;
+            color: #24292f;
+        }}
+        
+        .container {{
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }}
+        
+        .header {{
+            background: linear-gradient(135deg, #0366d6, #0969da);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }}
+        
+        .header h1 {{
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: 600;
+        }}
+        
+        .stats {{
+            background: #f6f8fa;
+            padding: 15px 30px;
+            border-bottom: 1px solid #d1d9e0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }}
+        
+        .table-container {{
+            padding: 0;
+            overflow-x: auto;
+        }}
+        
+        table {{
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+        }}
+        
+        th {{
+            background: #f6f8fa;
+            color: #24292f;
+            font-weight: 600;
+            padding: 15px 20px;
+            text-align: center;
+            border-bottom: 2px solid #d1d9e0;
+        }}
+        
+        td {{
+            padding: 20px;
+            border-bottom: 1px solid #e1e4e8;
+            vertical-align: center;
+        }}
+        
+        tr:hover {{
+            background-color: #f6f8fa;
+        }}
+        
+        .author {{
+            font-weight: 600;
+            color: #0366d6;
+        }}
+        
+        .code-block {{
+            background: #f6f8fa;
+            border: 1px solid #d1d9e0;
+            border-radius: 6px;
+            margin: 10px 0;
+            overflow-x: auto;
+            font-family: monospace;
+            padding: 10px;
+        }}
+    </style>
 </head>
-<body> <Table>
+<body>
+       
+<Table>
 <tr>
 <th>PR Number</th>
-        <th>Auther</th>
+        <th>Author</th>
     <th>Reviewer</th>
     <th>Comments</th>
-<th> PR Stauts </th>
+<th> PR Status</th>
 </tr>";
 
             if (PrList.Count > 0)
             {
                 for (int i = 0; i < PrList.Count; i++)
                 {
-                    var prRowItem = PrList[i]; 
-                    htmlContent = htmlContent + "<tr> <td  >"+ prRowItem.PrNumber + "</td>";
+                    var prRowItem = PrList[i];
+                    htmlContent = htmlContent + "<tr> <td  >" + prRowItem.PrNumber + "</td>";
                     htmlContent = htmlContent + " <td>" + prRowItem.prComments[0].Author + "</td>";
                     htmlContent = htmlContent + "<td> <table>";
                     for (int j = 0; j < prRowItem.stats.Counts.Count; j++)
-                    {                      
-                        htmlContent = htmlContent + " <tr> <td>" + prRowItem.stats.Counts.ElementAt(j).Key  + "</td> </tr>";
+                    {
+                        htmlContent = htmlContent + " <tr> <td>" + prRowItem.stats.Counts.ElementAt(j).Key + "</td> </tr>";
                     }
                     htmlContent = htmlContent + "</table> <td> <table>";
                     for (int j = 0; j < prRowItem.prComments.Count; j++)
                     {
                         htmlContent = htmlContent + " <tr> <td>" + prRowItem.prComments[j].CommentText + "</td> </tr>";
                     }
-                    htmlContent = htmlContent + "</table> <td>" + prRowItem.PrState+ "</tr>";
+                    htmlContent = htmlContent + "</table> <td>" + prRowItem.PrState + "</tr>";
                     htmlContent = htmlContent + "</tr>";
                 }
 
                 htmlContent = htmlContent + " </table>";
-
             }
 
             return htmlContent;
