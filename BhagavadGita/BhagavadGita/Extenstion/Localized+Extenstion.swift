@@ -3,7 +3,7 @@
 //  BhagavadGita
 //
 //  Created by MYTSP02154 on 18/03/24.
-//
+// Localized strings extension for easy localization handling
 
 import Foundation
 
