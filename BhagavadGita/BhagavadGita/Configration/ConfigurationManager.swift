@@ -3,7 +3,7 @@
 //  BhagavadGita
 //
 //  Created by MYTSP02154 on 14/03/24.
-//
+// Configuration manager for handling build configurations and API endpoints
 
 import Foundation
 
