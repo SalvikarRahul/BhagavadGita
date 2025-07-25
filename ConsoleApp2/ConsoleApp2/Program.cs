@@ -467,8 +467,8 @@ namespace ConsoleApp2
                     submittedAt = dateElement.GetString() ?? "";
 
                 // Skip comments from the PR author - we only want reviewer comments
-                if (author == prAuthor)
-                    continue;
+                //if (author == prAuthor)
+                //    continue;
 
                 // Clean up the body text but preserve code blocks and comments
                 body = CleanReviewBody(body);
