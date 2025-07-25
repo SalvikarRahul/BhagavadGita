@@ -130,7 +130,9 @@ namespace ConsoleApp2
 <th>PR Number</th>
         <th>Author</th>
     <th>Reviewer</th>
-    <th>Comments</th>
+  
+<th>Comments</th>
+  <th>File changes</th>
 <th> PR Status</th>
 </tr>";
 
@@ -152,7 +154,8 @@ namespace ConsoleApp2
                     {
                         htmlContent = htmlContent + " <tr> <td>" + prRowItem.prComments[j].CommentText + "</td> </tr>";
                     }
-                    htmlContent = htmlContent + "</table> <td>" + prRowItem.PrState + "</tr>";
+                    htmlContent = htmlContent + "</table> <td>" + prRowItem.fileChanges + "</td>";
+                    htmlContent = htmlContent + " <td>" + prRowItem.PrState + "</td>";
                     htmlContent = htmlContent + "</tr>";
                 }
 
