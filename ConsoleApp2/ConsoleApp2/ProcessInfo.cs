@@ -161,6 +161,10 @@ namespace ConsoleApp2
                         }
                         htmlContent = htmlContent + "</table>";
                     }
+                    else
+                    {
+                        htmlContent = htmlContent + "<td> </td>";
+                    }
 
                     if (prRowItem.prComments != null && prRowItem.prComments.Count > 0)
                     {
@@ -171,7 +175,11 @@ namespace ConsoleApp2
                         }
                         htmlContent = htmlContent + "</table>";
                     }
-                       
+                    else
+                    {
+                        htmlContent = htmlContent + "<td> </td>";
+                    }
+
                     htmlContent = htmlContent + " <td>" + prRowItem.fileChanges + "</td>";
                     htmlContent = htmlContent + " <td>" + prRowItem.PrState + "</td>";
                     htmlContent = htmlContent + "</tr>";

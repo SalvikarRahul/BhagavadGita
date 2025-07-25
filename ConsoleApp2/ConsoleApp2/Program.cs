@@ -15,8 +15,8 @@ namespace ConsoleApp2
         public static async Task Main(string[] args)
         {
             DateTime fromDate = DateTime.Now.AddDays(-30);
-            DateTime toDate = DateTime.Now;
-
+            DateTime toDate = DateTime.Now; 
+            args = new string[] { "2025-07-01","2025-07-25" };
             if (args.Length != 2)
             {
                 Console.WriteLine("Provide proper input");
