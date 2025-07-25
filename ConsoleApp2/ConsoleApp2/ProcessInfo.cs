@@ -143,18 +143,36 @@ namespace ConsoleApp2
                 {
                     var prRowItem = PrList[i];
                     htmlContent = htmlContent + "<tr> <td  >" + prRowItem.PrNumber + "</td>";
-                    htmlContent = htmlContent + " <td>" + prRowItem.prComments[0].Author + "</td>";
-                    htmlContent = htmlContent + "<td> <table>";
-                    for (int j = 0; j < prRowItem.stats.Counts.Count; j++)
+                    if (prRowItem.prComments != null && prRowItem.prComments.Count > 0)
                     {
-                        htmlContent = htmlContent + " <tr> <td>" + prRowItem.stats.Counts.ElementAt(j).Key + "</td> </tr>";
+                        htmlContent = htmlContent + " <td>" + prRowItem.prComments[0].Author + "</td>";
                     }
-                    htmlContent = htmlContent + "</table> <td> <table>";
-                    for (int j = 0; j < prRowItem.prComments.Count; j++)
+                    else
                     {
-                        htmlContent = htmlContent + " <tr> <td>" + prRowItem.prComments[j].CommentText + "</td> </tr>";
+                        htmlContent = htmlContent + "<td> </td>";
                     }
-                    htmlContent = htmlContent + "</table> <td>" + prRowItem.fileChanges + "</td>";
+                   
+                    if (prRowItem.stats.Counts != null && prRowItem.stats.Counts.Count > 0)
+                    {
+                        htmlContent = htmlContent + "<td> <table>";
+                        for (int j = 0; j < prRowItem.stats.Counts.Count; j++)
+                        {
+                            htmlContent = htmlContent + " <tr> <td>" + prRowItem.stats.Counts.ElementAt(j).Key + "</td> </tr>";
+                        }
+                        htmlContent = htmlContent + "</table>";
+                    }
+
+                    if (prRowItem.prComments != null && prRowItem.prComments.Count > 0)
+                    {
+                        htmlContent = htmlContent + " <td> <table>";
+                        for (int j = 0; j < prRowItem.prComments.Count; j++)
+                        {
+                            htmlContent = htmlContent + " <tr> <td>" + prRowItem.prComments[j].CommentText + "</td> </tr>";
+                        }
+                        htmlContent = htmlContent + "</table>";
+                    }
+                       
+                    htmlContent = htmlContent + " <td>" + prRowItem.fileChanges + "</td>";
                     htmlContent = htmlContent + " <td>" + prRowItem.PrState + "</td>";
                     htmlContent = htmlContent + "</tr>";
                 }
